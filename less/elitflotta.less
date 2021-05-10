@@ -1,0 +1,292 @@
+/**
+ * css/less stylesheet
+ * 
+ * @version 2019.07.29.
+ * @package elitflotta_export
+ * @author Soós András
+ */
+
+@oem_blue: #19AAF8;
+
+body {
+    background-color: #DDDDDD;
+    font-family: arial;
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+    & * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+}
+
+#login {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+    background-image: url("../logo.png");
+    background-size: 160px;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    &:before {
+        content: '';
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 0%;
+        height: 100%;
+    }
+    
+    .login_form {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        max-width: 640px;
+        padding: 40px 10px;
+        color: #FFFFFF;
+        margin-top: 240px;
+        
+        background-color: @oem_blue;
+        border: 2px #FFFFFF solid;
+        border-radius: 20px;
+        box-shadow: 0px 0px 1px #FFFFFF, 0px 0px 6px #FFFFFF inset, 0px 0px 9px #FFFFFF inset;
+        
+        span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        input {
+            position: relative;
+            display: block;
+            height: 30px;
+            width: 60%;
+            margin: auto;
+            padding: 0px 10px;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            color: navy;
+            font-weight: bold;
+            
+            &:nth-child(2) {
+                margin-top: 20px;
+            }
+            
+            &:nth-child(3) {
+                margin-top: 5px;
+            }
+        }
+        
+        #request_btn {
+            position: relative;
+            display: block;
+            height: 30px;
+            width: 40%;
+            margin: 25px auto 0px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: navy;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0px 0px 6px #FFFFFF;
+            color: #FFFFFF;
+            cursor: pointer;
+            opacity: .8;
+            
+            &:hover {
+                text-shadow: 0px 0px 3px @oem_blue, 0px 0px 6px @oem_blue, 0px 0px 9px @oem_blue;
+                box-shadow: 0px 0px 3px #FFFFFF, 0px 0px 6px #FFFFFF, 0px 0px 9px #FFFFFF;
+            }
+        }
+    }
+    
+    .bottom_info {
+        position: absolute;
+        display: block;
+        top: -45px;
+        width: 100%;
+        max-width: 620px;
+        color: red;
+    }
+}
+
+#selection {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10%;
+    text-align: center;
+    background-image: url("../logo.png");
+    background-size: 10%;
+    background-position: 2% 3%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    &:before {
+        content: '';
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 0%;
+        height: 100%;
+    }
+    
+    .list_box {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 320px;
+        width: 100%;
+        min-height: 105px;
+        padding: 40px 10px;
+        margin-bottom: 20px;
+        color: #FFFFFF;
+        
+        background-color: @oem_blue;
+        border: 2px #FFFFFF solid;
+        border-radius: 20px;
+        box-shadow: 0px 0px 1px #FFFFFF, 0px 0px 6px #FFFFFF inset, 0px 0px 9px #FFFFFF inset;
+        
+        -webkit-transition: all .5s linear 1s;
+               -moz-transition: all .5s linear 1s;
+                 -o-transition: all .5s linear 1s;
+                    transition: all .5s linear 1s;
+        
+        .justaminute {
+            font-size: 20px;
+            animation: shadows 1s linear .5s infinite normal;
+        }
+        
+        .checkbox_list_form {
+            display: none;
+            min-height: 500px;
+            
+            .page_title {
+                position: relative;
+                display: block;
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                width: 100%;
+            }
+            
+            .checkbox_title {
+                position: relative;
+                display: block;
+                text-align: center;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: left;
+                width: ~"calc(100% - 20px)";
+                margin: 30px 10px 10px;
+            }
+            
+            .input_rows {
+                position: relative;
+                display: block;
+                width: ~"calc(100% - 10px)";
+                
+                .none_items,
+                label {
+                    position: relative;
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    height: 20px;
+                    line-height: 20px;
+                    margin: 5px 10px;
+                    
+                    input {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 20px;
+                        height: 20px;
+
+                        &:nth-child(even) {background: red}
+                    }
+
+                    span {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: ~"calc(27% - 12px)";
+                        height: 20px;
+                        line-height: 20px;
+                        margin-left: 5px;
+                        overflow: hidden;
+                        
+                        &:nth-child(3)
+                        {
+                            width: ~"calc(19% - 12px)";
+                        }
+                    }
+                    
+                    &:nth-child(odd) {
+                        background-image: linear-gradient(to right, rgba(255, 255, 255, .3), rgba(255, 255, 255, .3), rgba(255, 255, 255, 0));
+                    }
+                }
+                
+                &.companies {
+                    margin-bottom: 70px;
+                }
+            }
+            
+            #collected_ids_btn {
+                position: absolute;
+                display: block;
+                bottom: 40px;
+                height: 30px;
+                width: 40%;
+                margin: 40px auto 0px;
+                margin-left: ~"calc(30% - 10px)";
+                text-align: center;
+                border-radius: 5px;
+                background-color: navy;
+                text-transform: uppercase;
+                font-weight: bold;
+                box-shadow: 0px 0px 6px #FFFFFF;
+                color: #FFFFFF;
+                cursor: pointer;
+                opacity: .8;
+
+                &:hover {
+                    text-shadow: 0px 0px 3px @oem_blue, 0px 0px 6px @oem_blue, 0px 0px 9px @oem_blue;
+                    box-shadow: 0px 0px 3px #FFFFFF, 0px 0px 6px #FFFFFF, 0px 0px 9px #FFFFFF;
+                }
+            }
+        }
+        
+        .bottom_text {
+            position: absolute;
+            display: block;
+            bottom: 20px;
+            width: ~"calc(100% - 20px)";
+            margin: 5px 0px 0px;
+            text-align: center;
+        }
+    }
+}
+
+// animációk
+@-webkit-keyframes shadows {
+    0% { opacity: 1;}
+    50% { opacity: .2;}
+    100% { opacity: 1;}
+}
