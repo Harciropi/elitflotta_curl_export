@@ -32,8 +32,8 @@ class elitflotta_export
                             . '<br>'
                             . 'Kérem adja meg az iroda.elitflotta.hu bejelentkezési adatait<br>'
                             . 'az exportálandó tételek kiolvasásához<br></div>';
-                    $return.= '<input id="usr" type="text" name="usr">';
-                    $return.= '<input id="psw" type="password" name="psw">';
+                    $return.= '<input id="usr" type="text" name="usr" placeholder="felhasználónév">';
+                    $return.= '<input id="psw" type="password" name="psw" placeholder="jelszó">';
                     $return.= '<input id="request_btn" type="submit" value="Adatok lekérése">';
                     $return.= '<div class="bottom_info">Az oldal sem bejelentkezési, sem más adatokat nem kezel és nem tárol,<br>'
                             . 'azokat közvetlenül az iroda.elitflotta.hu részére küldi, illetve onnan fogadja a feldogozáshoz!</div>';
